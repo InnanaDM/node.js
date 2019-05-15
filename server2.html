@@ -1,44 +1,4 @@
-var http = require('http');
-var fs = require('fs');
-console.log(__dirname);
-
-function handleRequest(req, res) {
-
-        fs.readFile(__dirname + '/index.html', function(err, data) {
-            if (err) throw err;
-        })
-}
-
-var PORT = 8080;
-function handleRequest(request,response) {
-
-switch (request.url) {
-    case '/':
-    resizeBy.end('Homepage');
-    break;
-
-    case '/about' :
-    resizeBy.end('About Page');
-    break;
-    case '/contact' :
-    res.end('Contact Page');
-    break;
-    default:
-    res.end('Homepage');
-
-}
-
-
-}
-
-var server = http.createServer(handleRequest); 
-
-server.listen(PORT, function () {
-    console.log('server has started on port' + PORT)
-   
-});
-
-function postAuction() {
+<!-- function postAuction() {
     // prompt for info about the item being put up for auction
     inquirer
       .prompt([
@@ -82,6 +42,4 @@ function postAuction() {
           }
         );
       });
-  }
-
-  
+  } -->
