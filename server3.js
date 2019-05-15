@@ -1,4 +1,13 @@
 var http = require('http');
+var fs = require('fs');
+console.log(__dirname);
+
+function handleRequest(req, res) {
+
+        fs.readFile(__dirname + '/index.html', function(err, data) {
+            if (err) throw err;
+        })
+}
 
 var PORT = 8080;
 function handleRequest(request,response) {
@@ -28,3 +37,4 @@ server.listen(PORT, function () {
     console.log('server has started on port' + PORT)
    
 });
+
